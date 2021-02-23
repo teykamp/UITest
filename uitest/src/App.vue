@@ -1,60 +1,66 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+  <div>
+    <div class="all">
+      <body>
+        <div class="pad">
+          <div class="hamburger">
+            <SideBar />
+          </div>
+        </div>
+        <div class="page">
+          <Page />
+        </div>
+      </body>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import SideBar from "./components/SideBar"
+import Page from "./components/Page"
 
 export default {
   name: 'App',
-
   components: {
-    HelloWorld,
+    SideBar,
+    Page
   },
+  data() {
+    return {
 
-  data: () => ({
-    //
-  }),
+    }
+  },
 };
 </script>
+
+<style scoped>
+body {
+  background-image: url("./assets/tile.svg");
+  background-repeat: repeat;
+  height: 1800px;
+
+}
+.pad {  
+  padding: 10px;
+}
+.hamburger {
+  background: #ca3e47;
+  width: 35px;
+  height: 36px;
+  border-radius: 30px;
+  margin: auto;
+  transition-duration: 100ms;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 5px 0px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 5px 0px rgba(0,0,0,0);
+}
+
+.hamburger:hover {
+  background: tomato;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+</style>

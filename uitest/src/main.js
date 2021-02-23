@@ -6,6 +6,9 @@ import App from './App.vue'
 import store from './store'
 import vuetify from './plugins/vuetify';
 
+// import Matter from "matter-js";
+// Object.definePrototype(Vue.prototype, '$Matter', { value: Matter });
+
 Vue.config.productionTip = false
 
 new Vue({
