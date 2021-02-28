@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "vue-scrollto": "^2.20.0"
+  }
+}
