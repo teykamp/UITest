@@ -9,10 +9,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import VueScrollTo from 'vue-scrollto';
 
-Vue.use(VueScrollTo, {
-  container: '.o-main-view',
-  offset: -90,
-});
+Vue.use(VueScrollTo);
 
 // import Matter from "matter-js";
 // Object.definePrototype(Vue.prototype, '$Matter', { value: Matter });

@@ -15,6 +15,7 @@
                         <v-card flat class="link">
                         <body><p><a href="" v-scroll-to="'#element'">About</a></p></body>
                         </v-card>
+                        
                     </v-col>
                     <v-col>
                         <v-card flat class="link">
@@ -45,7 +46,9 @@
 
 <script>
 export default {
-    
+    mounted () {
+    this.$scrollTo('#element', 1000, { easing: 'ease' })
+  },  
 }
 </script>
 
