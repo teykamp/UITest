@@ -1,11 +1,12 @@
 <template>
     <div>
+
         <v-container class=hold>
             <div data-aos="fade-down">
                 <v-container class="grey darken-5" fluid>
                     <v-row align-content="center">
                         <v-col>
-                            <v-card flat>
+                            <v-card flat width="400px">
                                 <!-- logo and stuff -->
                                 <img src="../assets/logo.png" width="50px" height="50px">
                             </v-card>
@@ -40,6 +41,12 @@
 
 
         <!-- end header -->
+        <v-container class="title">
+        <div>
+            <h4>Title Here</h4>
+        </div>
+        <hr class="line">
+        </v-container>
         
         <div id="about">
             <About />
@@ -72,6 +79,7 @@ export default {
     overflow: auto;
     z-index: 999;
     background: white;
+    width: 100%;
 }
 
 .link {
@@ -118,5 +126,22 @@ a::after{
 a:hover::after{
 	height: calc(100% + 8px)
 }
+#about {
+    padding-top:50px;
+}
+.title {
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: .1em;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* Need this for formatting! */
+    margin-bottom: -60px; 
 
+}
+.line {
+    width: 10%;
+    margin: auto;
+}
 </style>
