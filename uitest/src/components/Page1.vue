@@ -3,35 +3,29 @@
 
         <v-container class=hold>
             <div data-aos="fade-down">
-                <v-container class="grey darken-5" fluid>
-                    <v-row align-content="center">
-                        <v-col>
-                            <v-card flat width="400px">
+                <v-container fluid>
+                    <v-row>
+                        <!-- <v-col> -->
+                            <v-card flat width="50px">
                                 <!-- logo and stuff -->
                                 <img src="../assets/logo.png" width="50px" height="50px">
                             </v-card>
-                        </v-col>
-                        
-                        <v-col>
-                            <v-card flat class="link" min-width="100px">
+                        <!-- </v-col> -->
+                        <!-- <v-col> -->
+                            <v-card flat class="link" width="120px">
                             <body><p><a href="" v-scroll-to="'#about'">About</a></p></body>
                             </v-card>
-                        </v-col>
-                        <v-col>
-                            <v-card flat class="link" min-width="100px">
+                        <!-- </v-col> -->
+                        <!-- <v-col> -->
+                            <v-card flat class="link" width="120px">
                             <body><p><a href="" v-scroll-to="'#element'">Work</a></p></body>
                             </v-card>
-                        </v-col>
-                        <v-col>
-                            <v-card flat class="link" min-width="100px">
+                        <!-- </v-col> -->
+                        <!-- <v-col> -->
+                            <v-card flat class="link" width="120px">
                             <body><p><a href="" v-scroll-to="'#element'">Contact</a></p></body>
                             </v-card>
-                        </v-col>
-
-                        <v-col>
-                            <v-card flat>
-                            </v-card>
-                        </v-col>
+                        <!-- </v-col> -->
                     </v-row>
                 </v-container>
             </div>
@@ -43,7 +37,7 @@
         <!-- end header -->
         <v-container class="title">
         <div>
-            <h4>Title Here</h4>
+            <h4>Hi There!</h4>
         </div>
         <hr class="line">
         </v-container>
