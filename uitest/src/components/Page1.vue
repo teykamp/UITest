@@ -1,58 +1,79 @@
 <template>
     <div>
-        <div data-aos="fade-up">
-            <v-container class="grey darken-5">
-                <v-row align-content="center">
-                    <v-col>
-                        <v-card flat>
-                        </v-card>
-                    </v-col>
-                    <v-col>
-                        <v-card flat>
-                        </v-card>
-                    </v-col>
-                    <v-col>
-                        <v-card flat class="link">
-                        <body><p><a href="" v-scroll-to="'#element'">About</a></p></body>
-                        </v-card>
+        <v-container class=hold>
+            <div data-aos="fade-down">
+                <v-container class="grey darken-5" fluid>
+                    <v-row align-content="center">
+                        <v-col>
+                            <v-card flat>
+                                <!-- logo and stuff -->
+                                <img src="../assets/logo.png" width="50px" height="50px">
+                            </v-card>
+                        </v-col>
                         
-                    </v-col>
-                    <v-col>
-                        <v-card flat class="link">
-                        <body><p><a href="">Work</a></p></body>
-                        </v-card>
-                    </v-col>
-                    <v-col>
-                        <v-card flat class="link">
-                        <body><p><a href="">Contact</a></p></body>
-                        </v-card>
-                    </v-col>
-                    <v-col>
-                        <v-card flat>
-                        </v-card>
-                    </v-col>
-                    <v-col>
-                        <v-card flat>
-                        </v-card>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
-        <div class="test"></div>
-        <div id="element"> fhdjsfk
+                        <v-col>
+                            <v-card flat class="link" min-width="100px">
+                            <body><p><a href="" v-scroll-to="'#about'">About</a></p></body>
+                            </v-card>
+                        </v-col>
+                        <v-col>
+                            <v-card flat class="link" min-width="100px">
+                            <body><p><a href="" v-scroll-to="'#element'">Work</a></p></body>
+                            </v-card>
+                        </v-col>
+                        <v-col>
+                            <v-card flat class="link" min-width="100px">
+                            <body><p><a href="" v-scroll-to="'#element'">Contact</a></p></body>
+                            </v-card>
+                        </v-col>
+
+                        <v-col>
+                            <v-card flat>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+            <hr>
+        </v-container>
+        <div class="buffer"></div>
+
+
+        <!-- end header -->
+        
+        <div id="about">
+            <About />
         </div>
     </div>
 </template>
 
 <script>
+import About from "./About"
+
 export default {
-    mounted () {
-    this.$scrollTo('#element', 1000, { easing: 'ease' })
-  },  
-}
+  name: 'Page1',
+  components: {
+    About,
+  },
+  data() {
+    return {
+
+    }
+  },
+};
 </script>
 
 <style scoped>
+.buffer {
+    height: 140px;
+}
+.hold {
+    position: fixed;
+    overflow: auto;
+    z-index: 999;
+    background: white;
+}
+
 .link {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -83,21 +104,19 @@ a{
 }
 
 a::after{
-  content: "";
-  background: rgba(0, 0, 0, 0.267);
+    content: "";
+    background: rgba(0, 0, 0, 0.267);
 	mix-blend-mode: exclusion;
-  width: calc(100% + 20px);
-  height: 0;
-  position: absolute;
-  bottom: -4px;
-  left: -10px;
-	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 a:hover::after{
 	height: calc(100% + 8px)
 }
-.test {
-    height: 8000px;
-}
+
 </style>
